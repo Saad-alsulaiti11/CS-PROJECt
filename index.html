@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Integrated Web Application Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Integrated Web Application Project</h1>
+    <p>Exploring Cloud Computing, Data Transmission, and Internet Technologies</p>
+</header>
+
+<section class="cloud">
+    <h2>Cloud Computing & Web Apps</h2>
+    <p>
+        Cloud computing allows data to be stored and processed on remote servers instead of your local device.
+        HTML, CSS, and JavaScript run on the client-side (your browser), while cloud servers handle storage and processing on the server-side.
+    </p>
+    <button onclick="showMessage('Client-side runs in your browser; Server-side runs on remote cloud servers.')">
+        Client vs Server
+    </button>
+</section>
+
+<section class="internet">
+    <h2>Internet Technologies</h2>
+
+    <h3>DNS Server & URL/IP Relationship</h3>
+    <p>
+        When you type <strong>www.google.com</strong> in your browser, a DNS server translates it into an IP address (like 142.250.190.78). 
+        The browser then sends a request through multiple routers to reach the server. The server responds and the website is displayed.
+    </p>
+    <button onclick="showMessage('DNS ensures your browser can find websites without remembering IP numbers.')">
+        Why DNS Matters
+    </button>
+
+    <h3>Broadband Connection: Fiber Optic</h3>
+    <p>
+        Fiber optic broadband uses light signals to transmit data quickly over long distances.
+        It is ideal for streaming, online gaming, and large file transfers.
+    </p>
+    <button onclick="changeColor('internet', '#d0f0fd')">Highlight Section</button>
+    <button onclick="changeColor('internet', '')">Unhighlight Section</button>
+</section>
+
+<section class="data">
+    <h2>Data Transmission & Error Checking</h2>
+
+    <h3>Full-Duplex Communication</h3>
+    <p>Data can travel both ways simultaneously, like a phone call.</p>
+    <div class="diagram" onclick="showMessage('You clicked the diagram!')">
+        Computer A &lt;----&gt; Computer B
+    </div>
+
+    <h3>USB vs Broadband Comparison</h3>
+    <table>
+        <tr>
+            <th>Connection</th>
+            <th>Speed</th>
+            <th>Use Case</th>
+        </tr>
+        <tr>
+            <td>USB 3.0</td>
+            <td>5 Gbps</td>
+            <td>External storage, peripherals</td>
+        </tr>
+        <tr>
+            <td>Fiber Optic Broadband</td>
+            <td>1-10 Gbps</td>
+            <td>High-speed internet, streaming</td>
+        </tr>
+    </table>
+
+    <h3>Error Checking: Parity Check</h3>
+    <p>
+        Parity checking adds an extra bit to detect errors in data transmission. Click the button to simulate an error check:
+    </p>
+    <button onclick="parityCheck('1010110')">Test Parity</button>
+</section>
+
+<section class="cloud-vs">
+    <h2>Cloud vs Traditional Storage</h2>
+    <p>
+        Traditional storage keeps data on local devices like hard drives or USBs.
+        Cloud storage keeps data on remote servers accessible online.
+    </p>
+    <button onclick="toggleInfo('cloudVsInfo')">More Info</button>
+    <p id="cloudVsInfo" class="hidden">
+        Cloud storage allows collaboration, remote access, automatic backups, and scalable storage without buying extra hardware.
+    </p>
+</section>
+
+<footer>
+    <p>School Project | Created by [Your Name]</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
